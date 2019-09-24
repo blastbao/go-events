@@ -1,0 +1,31 @@
+{
+	"comment": "",
+	"ignore": "test",
+	"package": [
+		{
+			"checksumSHA1": "mDNBjIi/nvEt2poJ+qdeyosk/IM=",
+			"path": "github.com/sirupsen/logrus",
+			"revision": "dae0fa8d5b0c810a8ab733fbd5510c7cae84eca4",
+			"revisionTime": "2019-03-11T16:20:41Z"
+		},
+		{
+			"checksumSHA1": "QU00lGkD/G00hoTs2qG7q4xsLVc=",
+			"path": "golang.org/x/crypto/ssh/terminal",
+			"revision": "b7391e95e576cacdcdd422573063bc057239113d",
+			"revisionTime": "2019-03-19T22:29:04Z"
+		},
+		{
+			"checksumSHA1": "lFULPHzDCUyLqXZc4Fzi7bIOsow=",
+			"path": "golang.org/x/sys/unix",
+			"revision": "6c81ef8f67ca3f42fc9cd71dfbd5f35b0c4b5771",
+			"revisionTime": "2019-03-18T07:51:36Z"
+		},
+		{
+			"checksumSHA1": "xRGRFxlD0Q6X8KdR4/KIwNyDJG0=",
+			"path": "golang.org/x/sys/windows",
+			"revision": "6c81ef8f67ca3f42fc9cd71dfbd5f35b0c4b5771",
+			"revisionTime": "2019-03-18T07:51:36Z"
+		}
+	],
+	"rootPath": "github.com/blastbao/go-events"
+}
