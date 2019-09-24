@@ -5,8 +5,10 @@ import (
 	"sync"
 )
 
-// Channel provides a sink that can be listened on. The writer and channel
-// listener must operate in separate goroutines.
+// Channel provides a sink that can be listened on.
+//
+//
+// The writer and channel listener must operate in separate goroutines.
 //
 // Consumers should listen on Channel.C until Closed is closed.
 type Channel struct {
@@ -30,8 +32,8 @@ func (ch *Channel) Done() chan struct{} {
 	return ch.closed
 }
 
-// Write the event to the channel. Must be called in a separate goroutine from
-// the listener.
+// Write the event to the channel.
+// Must be called in a separate goroutine from the listener.
 func (ch *Channel) Write(event Event) error {
 	select {
 	case ch.C <- event:
@@ -43,10 +45,11 @@ func (ch *Channel) Write(event Event) error {
 
 // Close the channel sink.
 func (ch *Channel) Close() error {
+
+	// 值得注意的是，所有的关闭操作都没有关闭接收 event 的 C 管道
 	ch.once.Do(func() {
 		close(ch.closed)
 	})
-
 	return nil
 }
 

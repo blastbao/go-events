@@ -7,9 +7,8 @@ import (
 	"github.com/sirupsen/logrus"
 )
 
-// Queue accepts all messages into a queue for asynchronous consumption
-// by a sink. It is unbounded and thread safe but the sink must be reliable or
-// events will be dropped.
+// Queue accepts all messages into a queue for asynchronous consumption by a sink.
+// It is unbounded and thread safe but the sink must be reliable or events will be dropped.
 type Queue struct {
 	dst    Sink
 	events *list.List
